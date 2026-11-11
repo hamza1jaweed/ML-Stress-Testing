@@ -4,6 +4,8 @@ Real-time market regime detection (unsupervised GMM + Markov transition
 estimation) and dynamic portfolio stress testing (Monte Carlo + historical
 crisis replay) with a dark financial-terminal React frontend.
 
+![Regime Terminal — full platform view](docs/screenshot.png)
+
 Runs fully offline: the synthetic data generator produces correlated,
 regime-switching geometric Brownian motion with volatility clustering, so no
 external API or market-data key is required. A cached `yfinance` wrapper
@@ -104,3 +106,7 @@ portfolio performance, and a **risk-parity** optimizer on the frontier.
 
 All simulations are vectorized NumPy with explicit seeds — identical requests
 return identical results.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
