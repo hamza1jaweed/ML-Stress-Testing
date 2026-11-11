@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-terminal-bg text-terminal-ink antialiased;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* Thin, recessive range sliders for the terminal look. */
+input[type="range"] {
+  @apply h-1 w-full cursor-pointer appearance-none rounded bg-terminal-border;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply h-3.5 w-3.5 rounded-full border-2 border-terminal-bg;
+  background: var(--thumb-color, #3987e5);
+}
+input[type="range"]::-moz-range-thumb {
+  @apply h-3.5 w-3.5 rounded-full border-2 border-terminal-bg;
+  background: var(--thumb-color, #3987e5);
+}
+
+.panel {
+  @apply rounded-lg border border-terminal-border bg-terminal-panel;
+}
+
+.panel-title {
+  @apply flex items-center gap-2 border-b border-terminal-border px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-terminal-muted;
+}

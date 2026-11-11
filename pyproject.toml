@@ -1,0 +1,19 @@
+[project]
+name = "regime-stress-platform"
+version = "1.0.0"
+description = "Real-time market regime detection and dynamic portfolio stress-testing platform"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
